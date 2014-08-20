@@ -6,11 +6,17 @@
 </head>
 <body>
 
-<div ng-app="">
+<div ng-app="currencyApp">
 
-    <div ng-controller="">
+    <div ng-controller="currencyController">
+        <input type="number" ng-model="amount"><br>
+        default currency symbol ($): <span>{{amount | currency}}</span><br>
+        custom currency identifier (USD$): <span>{{amount | currency: "USD$"}}</span><br>
+        number <span>{{amount | number: 2}}</span><br>
+        custom filter <span>{{amount | myCurrency}}</span>
 
     </div>
+
 
 </div>
 
